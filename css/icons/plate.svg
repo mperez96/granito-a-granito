@@ -1,0 +1,61 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blueGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6B74E6"/>
+      <stop offset="100%" stop-color="#474FB5"/>
+    </linearGradient>
+
+    <radialGradient id="plateInner" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#F9FAFF"/>
+      <stop offset="100%" stop-color="#E7E9FF"/>
+    </radialGradient>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#2D347A" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" fill="#F4F4F6"/>
+
+  <!-- Sparkles -->
+  <path d="M95 70L105 95L130 105L105 115L95 140L85 115L60 105L85 95L95 70Z"
+        fill="#8A92FF" opacity="0.85"/>
+        
+  <path d="M165 110L172 127L189 134L172 141L165 158L158 141L141 134L158 127L165 110Z"
+        fill="#8A92FF" opacity="0.75"/>
+
+  <path d="M410 390L420 415L445 425L420 435L410 460L400 435L375 425L400 415L410 390Z"
+        fill="#8A92FF" opacity="0.8"/>
+
+  <!-- Knife -->
+  <g filter="url(#shadow)">
+    <path d="M70 90C70 78 80 68 92 68H100C112 68 122 78 122 90V220L100 270V440C100 452 90 462 78 462C66 462 56 452 56 440V90H70Z"
+          fill="url(#blueGradient)"/>
+  </g>
+
+  <!-- Fork -->
+  <g filter="url(#shadow)">
+    <path d="M410 68H422V210H435V68H447V210H460V68H472V240L450 280V438C450 452 438 464 424 464C410 464 398 452 398 438V280L376 240V68H388V210H410V68Z"
+          fill="url(#blueGradient)"/>
+  </g>
+
+  <!-- Plate -->
+  <g filter="url(#shadow)">
+    <circle cx="256" cy="256" r="142" fill="url(#blueGradient)"/>
+    <circle cx="256" cy="256" r="118" fill="url(#plateInner)"/>
+  </g>
+
+  <!-- Heart Shadow -->
+  <path d="M256 310C230 290 188 260 188 220C188 194 208 176 234 176C248 176 260 184 268 196C276 184 288 176 302 176C328 176 348 194 348 220C348 260 306 290 280 310L268 320L256 310Z"
+        fill="#C7CCFF"
+        opacity="0.4"/>
+
+  <!-- Heart -->
+  <path d="M256 296C232 278 194 250 194 216C194 194 212 178 234 178C248 178 260 186 268 198C276 186 288 178 302 178C324 178 342 194 342 216C342 250 304 278 280 296L268 306L256 296Z"
+        fill="url(#blueGradient)"/>
+
+  <!-- Heart Highlight -->
+  <ellipse cx="246" cy="215" rx="18" ry="10" fill="white" opacity="0.22"/>
+  <ellipse cx="296" cy="225" rx="22" ry="14" fill="white" opacity="0.16"/>
+</svg>

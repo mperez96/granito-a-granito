@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Granito a Granito — Proyecto de servicio social para combatir la inseguridad alimentaria en Monterrey, Nuevo León, en alianza con Cáritas de Monterrey.">
+
+  <title>Granito a Granito</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="#intro" class="navbar__brand">
+        Granito a Granito
+        <img src="css\icons\plate.svg" alt="Full plate for everyone!" width="50" height="50">
+    </a>
+
+    <button class="navbar__toggle"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="nav-menu">
+      <svg class="navbar__toggle-icon"
+           xmlns="http://www.w3.org/2000/svg"
+           viewBox="0 0 24 24"
+           fill="none"
+           stroke="currentColor"
+           stroke-width="2.5"
+           stroke-linecap="round"
+           aria-hidden="true">
+        <line class="line-top" x1="3" y1="6"  x2="21" y2="6"/>
+        <line class="line-mid" x1="3" y1="12" x2="21" y2="12"/>
+        <line class="line-bot" x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+
+    <nav class="navbar__links" id="nav-menu" aria-label="Navegación principal">
+      <a href="#intro">Inicio</a>
+      <a href="#metas">Metas</a>
+      <!-- <a href="#carrusel">Galería</a> -->
+      <a href="#como-ayudar">¿Cómo ayudar?</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- SECCIÓN 1 — HERO -->
+    <section id="intro" class="hero">
+
+      <div class="hero__content">
+        <h1 class="hero__title">Granito a<br>Granito</h1>
+
+        <p class="hero__subtitle">
+          Un proyecto de servicio social para combatir la inseguridad alimentaria en Monterrey
+        </p>
+
+        <p class="hero__body">
+          Desde 2025, Monterrey se ha convertido en un destino para miles de personas migrantes
+          que, ante el endurecimiento de políticas migratorias en EE.UU., permanecen en la ciudad
+          sin vivienda ni acceso a alimentación. Muchas de ellas viven en condiciones precarias
+          cerca de los rieles del tren, en zonas del centro metropolitano. Ante esta realidad,
+          nos unimos a <strong>Cáritas de Monterrey</strong> —organización con más de 40 años
+          de trayectoria en apoyo comunitario— para llevar alimento y dignidad a quienes más
+          lo necesitan. Este proyecto se alinea con los <strong>ODS 2 (Hambre Cero)</strong>
+          y <strong>ODS 3 (Salud y Bienestar)</strong> de la Agenda 2030.
+        </p>
+
+        <div class="hero__stats" aria-label="Datos de pobreza en Monterrey">
+          <div class="stat-card">
+            <span class="stat-card__number">207,064</span>
+            <span class="stat-card__label">personas en situación de pobreza en Monterrey</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__number">128,789</span>
+            <span class="stat-card__label">con carencia por acceso a alimentación nutritiva</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__number">262,899</span>
+            <span class="stat-card__label">sin acceso adecuado a servicios de salud</span>
+          </div>
+        </div>
+
+        <a href="#metas" class="hero__cta">Conoce el avance del proyecto ↓</a>
+      </div>
+
+    </section>
+
+    <!-- SECCIÓN 2 — AVANCE DE METAS -->
+    <section id="metas">
+      <div class="container">
+
+        <div class="section__header">
+          <h2 class="section__title">Nuestro Avance</h2>
+          <p class="section__subtitle">Cada granito cuenta. Así vamos:</p>
+        </div>
+
+        <div class="metas-grid">
+
+          <article class="meta-card">
+            <div class="meta-card__icon" aria-hidden="true">🥫</div>
+            <h3 class="meta-card__title">Artículos alimenticios recolectados</h3>
+            <div class="progress-bar"
+                 role="progressbar"
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                 aria-valuenow="0"
+                 aria-label="Progreso de artículos recolectados">
+              <div class="progress-bar__fill" data-meta="articulos"></div>
+            </div>
+            <div class="meta-card__numbers">
+              <span class="meta-card__fraction">
+                <span class="meta-card__current" id="num-articulos">0</span><span class="meta-card__sep">/</span><span class="meta-card__goal">100</span>
+              </span>
+              <span class="meta-card__percent" id="pct-articulos">0%</span>
+            </div>
+            <p class="meta-card__unit">artículos no perecederos</p>
+            <p class="meta-card__message" id="msg-articulos">¡Apenas comenzamos!</p>
+          </article>
+
+          <article class="meta-card">
+            <div class="meta-card__icon" aria-hidden="true">👥</div>
+            <h3 class="meta-card__title">Personas sensibilizadas</h3>
+            <div class="progress-bar"
+                 role="progressbar"
+                 aria-valuemin="0"
+                 aria-valuemax="150"
+                 aria-valuenow="0"
+                 aria-label="Progreso de personas sensibilizadas">
+              <div class="progress-bar__fill" data-meta="personas"></div>
+            </div>
+            <div class="meta-card__numbers">
+              <span class="meta-card__fraction">
+                <span class="meta-card__current" id="num-personas">0</span><span class="meta-card__sep">/</span><span class="meta-card__goal">150</span>
+              </span>
+              <span class="meta-card__percent" id="pct-personas">0%</span>
+            </div>
+            <p class="meta-card__unit">personas en la comunidad</p>
+            <p class="meta-card__message" id="msg-personas">¡Apenas comenzamos!</p>
+          </article>
+
+          <article class="meta-card">
+            <div class="meta-card__icon" aria-hidden="true">📦</div>
+            <h3 class="meta-card__title">Entregas realizadas a Cáritas</h3>
+            <div class="progress-bar"
+                 role="progressbar"
+                 aria-valuemin="0"
+                 aria-valuemax="1"
+                 aria-valuenow="0"
+                 aria-label="Progreso de entregas realizadas">
+              <div class="progress-bar__fill" data-meta="entregas"></div>
+            </div>
+            <div class="meta-card__numbers">
+              <span class="meta-card__fraction">
+                <span class="meta-card__current" id="num-entregas">0</span><span class="meta-card__sep">/</span><span class="meta-card__goal">1</span>
+              </span>
+              <span class="meta-card__percent" id="pct-entregas">0%</span>
+            </div>
+            <p class="meta-card__unit">entrega final organizada</p>
+            <p class="meta-card__message" id="msg-entregas">¡Apenas comenzamos!</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3 — FOTOGRAFÍAS -->
+    <!-- <section id="carrusel">
+
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Ayuda ya recibida</h2>
+          <p class="section__subtitle">Cada donación es un granito más. Gracias a quienes ya sumaron.</p>
+        </div>
+      </div>
+
+      <div class="carousel" aria-label="Galería de ayuda recibida">
+        <div class="track">
+
+          <div class="slide">
+            <img src="https://picsum.photos/400/300?random=1"
+                 alt="Donación de la familia Rodríguez"
+                 loading="lazy">
+            <p class="caption">"La familia Rodríguez donó arroz, frijoles y aceite de cocina para dos semanas. ¡Gracias de corazón!"</p>
+          </div>
+
+          <div class="slide">
+            <img src="https://picsum.photos/400/300?random=2"
+                 alt="Donación de doña Carmen y sus hijos"
+                 loading="lazy">
+            <p class="caption">"Doña Carmen y sus hijos trajeron 15 latas de atún y sopa de pasta. Un gesto enorme."</p>
+          </div>
+
+          <div class="slide">
+            <img src="https://picsum.photos/400/300?random=3"
+                 alt="Colecta de vecinos de Mitras Norte"
+                 loading="lazy">
+            <p class="caption">"Vecinos de Mitras Norte se organizaron y juntaron 3 cajas de víveres. ¡La comunidad responde!"</p>
+          </div>
+
+          <div class="slide">
+            <img src="https://picsum.photos/400/300?random=4"
+                 alt="Donación del grupo de mamás del Centro"
+                 loading="lazy">
+            <p class="caption">"El grupo de mamás de la Col. Centro donó leche en polvo y avena para los más pequeños."</p>
+          </div>
+
+          <div class="slide">
+            <img src="https://picsum.photos/400/300?random=5"
+                 alt="Donación de la familia Martínez"
+                 loading="lazy">
+            <p class="caption">"La familia Martínez sumó pasta, frijoles y aceite. Cada granito cuenta — ¡y el suyo no fue la excepción!"</p>
+          </div>
+
+        </div>
+      </div>
+
+    </section> -->
+
+    <!-- SECCIÓN 4 — CONVOCATORIA Y CIERRE -->
+    <section id="como-ayudar">
+      <div class="container">
+
+        <!-- 1. AGRADECIMIENTO-->
+        <div class="ayuda__bloque ayuda__gracias">
+          <h2 class="section__title">Gracias a quienes ya han apoyado</h2>
+          <p>Este proyecto no sería posible sin cada persona que ha decidido contribuir con un granito más. Su generosidad transforma vidas en nuestra ciudad.</p>
+        </div>
+
+        <!-- 2. PRODUCTOS-->
+        <div class="ayuda__bloque productos-bloque">
+          <h3 class="productos__titulo">¿Qué productos estamos recibiendo?</h3>
+          <p class="productos__intro">
+            Todo suma. Aquí te decimos qué necesitamos en este momento ¡cualquier aporte hace la diferencia!
+          </p>
+
+          <div class="productos-grid">
+
+            <!-- Básicos -->
+            <article class="producto-card">
+              <figure class="producto-card__media">
+                <img src="img/we-accept/azucar.jpg" alt="Azúcar" loading="lazy">
+              </figure>
+              <div class="producto-card__info">
+                <span class="producto-card__tag">Básico</span>
+                <p class="producto-card__name">Azúcar</p>
+              </div>
+            </article>
+
+            <article class="producto-card">
+              <figure class="producto-card__media">
+                <img src="img/we-accept/frijol.jpg" alt="Frijol" loading="lazy">
+              </figure>
+              <div class="producto-card__info">
+                <span class="producto-card__tag">Básico</span>
+                <p class="producto-card__name">Frijol</p>
+              </div>
+            </article>
+
+            <article class="producto-card">
+              <figure class="producto-card__media">
+                <img src="img/we-accept/arroz.jpg" alt="Arroz" loading="lazy">
+              </figure>
+              <div class="producto-card__info">
+                <span class="producto-card__tag">Básico</span>
+                <p class="producto-card__name">Arroz</p>
+              </div>
+            </article>
+
+            <article class="producto-card">
+              <figure class="producto-card__media">
+                <img src="img/we-accept/aceite.jpg" alt="Aceite vegetal" loading="lazy">
+              </figure>
+              <div class="producto-card__info">
+                <span class="producto-card__tag">Básico</span>
+                <p class="producto-card__name">Aceite</p>
+              </div>
+            </article>
+
+            <!-- No perecederos -->
+            <article class="producto-card">
+              <figure class="producto-card__media">
+                <img src="img/we-accept/atun.avif" alt="Atún enlatado" loading="lazy">
+              </figure>
+              <div class="producto-card__info">
+                <span class="producto-card__tag">No perecedero</span>
+                <p class="producto-card__name">Atún enlatado</p>
+              </div>
+            </article>
+
+            <article class="producto-card">
+              <figure class="producto-card__media">
+                <img src="img/we-accept/sopa-de-pasta.jpg" alt="Sopa de pasta" loading="lazy">
+              </figure>
+              <div class="producto-card__info">
+                <span class="producto-card__tag">No perecedero</span>
+                <p class="producto-card__name">Sopa de pasta</p>
+              </div>
+            </article>
+
+            <article class="producto-card">
+              <figure class="producto-card__media">
+                <img src="img/we-accept/leche-en-polvo.jpg" alt="Leche en polvo" loading="lazy">
+              </figure>
+              <div class="producto-card__info">
+                <span class="producto-card__tag">No perecedero</span>
+                <p class="producto-card__name">Leche en polvo</p>
+              </div>
+            </article>
+
+            <article class="producto-card">
+              <figure class="producto-card__media">
+                <img src="img/we-accept/vena.jpg" alt="Avena" loading="lazy">
+              </figure>
+              <div class="producto-card__info">
+                <span class="producto-card__tag">No perecedero</span>
+                <p class="producto-card__name">Avena</p>
+              </div>
+            </article>
+
+            <article class="producto-card">
+              <figure class="producto-card__media">
+                <img src="img/we-accept/sardinas.jpeg" alt="Sardinas en lata" loading="lazy">
+              </figure>
+              <div class="producto-card__info">
+                <span class="producto-card__tag">No perecedero</span>
+                <p class="producto-card__name">Sardinas en lata</p>
+              </div>
+            </article>
+
+            <article class="producto-card">
+              <figure class="producto-card__media">
+                <img src="img/we-accept/pure-de-tomate.jpg" alt="Puré de tomate" loading="lazy">
+              </figure>
+              <div class="producto-card__info">
+                <span class="producto-card__tag">No perecedero</span>
+                <p class="producto-card__name">Puré de tomate</p>
+              </div>
+            </article>
+
+            <!-- Bonus: Artículos Escolares — Campaña Cáritas -->
+            <article class="producto-card producto-card--highlight">
+              <figure class="producto-card__media">
+                <img src="img/we-accept/mochila.webp" alt="Mochilas y artículos escolares" loading="lazy">
+              </figure>
+              <div class="producto-card__info">
+                <span class="producto-card__tag producto-card__tag--escolar">Campaña especial Cáritas</span>
+                <p class="producto-card__name">Artículos escolares · Campaña de Mochilas</p>
+                <p class="producto-card__detail">Cáritas está recibiendo mochilas con útiles para niños: cuadernos, lápices, bolígrafos, colores, reglas, sacapuntas y más.</p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- 3. CONVOCATORIA -->
+        <div class="ayuda__bloque ayuda__convocatoria">
+          <h3 class="ayuda__convocatoria-title">¿Deseas ayudarnos?</h3>
+          <p class="ayuda__convocatoria-texto">
+            Los vecinos y amigos en las colonias <strong>Monterrey Centro</strong> y <strong>Mitras Norte</strong>
+            estamos regularmente comunicándonos para realizar colectas.
+          </p>
+
+          <!-- 3.1 COUNTDOWN -->
+          <div class="colecta-box" role="region" aria-label="Próxima colecta">
+            <span class="colecta-box__icon" aria-hidden="true">📅</span>
+            <span>Próxima colecta general: <strong>29 de Mayo, 2026 · 19:00 horas</strong></span>
+          </div>
+
+          <div class="countdown" aria-live="polite" aria-label="Tiempo restante para la colecta">
+            <div class="countdown__unit">
+              <span class="countdown__value" id="cd-dias">--</span>
+              <span class="countdown__label">días</span>
+            </div>
+            <span class="countdown__sep" aria-hidden="true">:</span>
+            <div class="countdown__unit">
+              <span class="countdown__value" id="cd-horas">--</span>
+              <span class="countdown__label">horas</span>
+            </div>
+            <span class="countdown__sep" aria-hidden="true">:</span>
+            <div class="countdown__unit">
+              <span class="countdown__value" id="cd-minutos">--</span>
+              <span class="countdown__label">min</span>
+            </div>
+            <span class="countdown__sep" aria-hidden="true">:</span>
+            <div class="countdown__unit">
+              <span class="countdown__value" id="cd-segundos">--</span>
+              <span class="countdown__label">seg</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. MAPAS -->
+        <div class="ayuda__bloque ayuda__mapas">
+          <div class="mapa-card">
+            <p class="mapa-card__label">📍 Plaza José S. Vivanco</p>
+            <iframe
+              src="https://maps.google.com/maps?q=Plaza+Jos%C3%A9+S.+Vivanco%2C+Centro%2C+Monterrey%2C+Nuevo+Le%C3%B3n&output=embed"
+              title="Mapa de Plaza José S. Vivanco, Monterrey Centro"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+          </div>
+          <div class="mapa-card">
+            <p class="mapa-card__label">📍 Condominios Constitución</p>
+            <iframe
+              src="https://maps.google.com/maps?q=Condominios+Constituci%C3%B3n%2C+Mitras+Norte%2C+Monterrey%2C+Nuevo+Le%C3%B3n&output=embed"
+              title="Mapa de Condominios Constitución, Mitras Norte"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <!-- 4. AGRADECIMIENTO -->
+        <div class="cierre">
+          <h2 class="cierre__titulo">GRACIAS</h2>
+
+          <!-- Decorativo -->
+          <svg class="cierre__deco"
+               xmlns="http://www.w3.org/2000/svg"
+               viewBox="0 0 440 40"
+               aria-hidden="true"
+               role="presentation">
+            <!-- grain (oval rotado) -->
+            <ellipse cx="14"  cy="20" rx="12" ry="7" fill="currentColor" transform="rotate(-25,14,20)"/>
+            <!-- estrella 4 puntas -->
+            <path d="M66,8 L68,18 L78,20 L68,22 L66,32 L64,22 L54,20 L64,18Z" fill="currentColor"/>
+            <!-- corazón -->
+            <path transform="translate(118,20)" d="M0,-6 C-5,-14 -14,-11 -14,-5 C-14,2 0,10 0,10 C0,10 14,2 14,-5 C14,-11 5,-14 0,-6Z" fill="currentColor"/>
+            <!-- estrella -->
+            <path d="M170,8 L172,18 L182,20 L172,22 L170,32 L168,22 L158,20 L168,18Z" fill="currentColor"/>
+            <!-- grain -->
+            <ellipse cx="220" cy="20" rx="12" ry="7" fill="currentColor" transform="rotate(25,220,20)"/>
+            <!-- estrella -->
+            <path d="M272,8 L274,18 L284,20 L274,22 L272,32 L270,22 L260,20 L270,18Z" fill="currentColor"/>
+            <!-- corazón -->
+            <path transform="translate(324,20)" d="M0,-6 C-5,-14 -14,-11 -14,-5 C-14,2 0,10 0,10 C0,10 14,2 14,-5 C14,-11 5,-14 0,-6Z" fill="currentColor"/>
+            <!-- estrella -->
+            <path d="M376,8 L378,18 L388,20 L378,22 L376,32 L374,22 L364,20 L374,18Z" fill="currentColor"/>
+            <!-- grain -->
+            <ellipse cx="426" cy="20" rx="12" ry="7" fill="currentColor" transform="rotate(-25,426,20)"/>
+          </svg>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p><strong>Granito a Granito</strong> · Monterrey, N.L.</p>
+    <p>Proyecto desarrollado con la guía del programa Centro de Estudios y Formación en Desarrollo Humano (CEFODEH)</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
