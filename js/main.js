@@ -1,6 +1,6 @@
 // ── ACTUALIZAR ESTOS VALORES CONFORME AVANCE EL PROYECTO ──
 const META_ARTICULOS_ACTUAL = 154;    // Meta: 100 artículos
-const META_PERSONAS_ACTUAL  = 0;    // Meta: 150 personas
+const META_PERSONAS_ACTUAL  = 56;    // Meta: 150 personas
 const META_ENTREGAS_ACTUAL  = 0;    // Meta: entrega
 const FECHA_COLECTA = new Date('2026-06-12T19:00:00'); // fecha de colecta
 
